@@ -1,0 +1,116 @@
+:root {
+  --scale-value: 1.08;
+  --negative-margin-card: -60px;
+}
+
+.deck {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 100%;
+  overflow-y: clip;
+  padding-top: 160px;
+}
+
+.main-cartes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.main-cartes .carte {
+  position: relative;
+  height: calc(420px * 0.8);
+  width: calc(320px * 0.8);
+  ;
+  margin-right: var(--negative-margin-card);
+  transform-origin: bottom center;
+}
+
+.main-cartes .carte:hover {
+  position: relative;
+  height: calc(420px * 0.8);
+  width: calc(320px * 0.8);
+  ;
+  margin-right: var(--negative-margin-card);
+  transform-origin: bottom center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+
+  transition: 0.5s;
+  z-index: 2;
+
+  box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -3px 10px, 5px 5px 10px -3px rgba(0,0,0,0);
+}
+
+.main-cartes>*:nth-child(1) {
+  transform: rotateZ(-30deg);
+}
+
+.main-cartes>*:nth-child(1):hover {
+  transform: rotateZ(-30deg) translateY(-50px) scale(var(--scale-value));
+}
+
+.main-cartes>*:nth-child(2) {
+  transform: rotateZ(-15deg);
+}
+
+.main-cartes>*:nth-child(2):hover {
+  transform: rotateZ(-15deg) translateY(-50px) scale(var(--scale-value));
+}
+
+.main-cartes>*:nth-child(3) {
+  transform: rotateZ(15deg);
+}
+
+.main-cartes>*:nth-child(3):hover {
+  transform: rotateZ(15deg) translateY(-35px) scale(var(--scale-value));
+}
+
+.main-cartes>*:nth-child(4) {
+  transform: rotateZ(30deg);
+}
+
+.main-cartes>*:nth-child(4):hover {
+  transform: rotateZ(30deg) translateY(-50px) scale(var(--scale-value));
+}
+
+
+.shuffle-button {
+  position: absolute;
+  right: 0;
+  margin-right: 2%;
+  height: calc(140px * 1.2);
+  width: calc(88px * 1.2);
+  border: none;
+  background-color: transparent;
+}
+
+.shuffle-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.shuffle-button:active {
+  transform: translateY(20px) !important;
+
+  transition: all 0.1s ease-in-out;
+}
+
+.shuffle-button:hover {
+  transform: translateY(3px);
+
+}

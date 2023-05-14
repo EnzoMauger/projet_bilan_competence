@@ -1,0 +1,29 @@
+#main-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    margin-bottom: 2.5%;
+    width: 100%;
+    padding: 1rem;
+
+    background-color: white;
+    border-top: 8px solid black;
+    border-bottom: thin solid black;
+
+    font-weight: bold;
+}
+
+#main-header ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+#main-header ul a {
+    text-decoration: none;
+    color:black;
+}
+
+#main-header a.active {
+    text-decoration: underline;
+}
